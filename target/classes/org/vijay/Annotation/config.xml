@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- bean definitions here -->
+
+	<!-- 	<bean name="student" class="org.vijay.Annotation.Student">
+		<constructor-arg value="Vijay" type="String"/>
+		<constructor-arg value="102" type="int"/>
+		<constructor-arg>
+			<list>
+				<value>Mathematics</value>
+				<value>History</value>
+				<value>Geography</value>
+				<value>polity</value>
+				<value>Economy</value>
+			</list>
+		</constructor-arg>
+	</bean>	
+	<bean name="teacher" class="org.vijay.Annotation.Teacher">
+		<constructor-arg value="Mr.Jaydeep Sir"/>
+		<constructor-arg value="Java"/>
+	</bean>
+					 -->
+					 <context:annotation-config/>
+					 <bean name="teacher" class="org.vijay.Annotation.Teacher">
+						<property name="name" value="Mr.Jaydeep Sir"/>
+						<property name="subject" value="java"/>
+					</bean>
+					<bean name="student" class="org.vijay.Annotation.Student">
+					
+					 </bean>
+</beans>

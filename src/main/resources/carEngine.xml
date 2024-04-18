@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.vijay.refernceTyprDemo.Car" name="car">
+		<property name="carName" value="Creta" />
+		<property name="carColor" value="Black" />
+		<property name="carType" value="fourWheeler" />
+		<property name= "engine" ref="engi"/>
+	
+	</bean>
+
+<bean class="com.vijay.refernceTyprDemo.Engine" name="engi">
+		<property name="engineType" value="fourstroke" />
+	
+	</bean>
+<!-- <bean id="stud66" class="com.vijay.StudentDetails"  p:studentRollNumber="106" p:studentName="aaa" p:address="yyy" />
+	 -->
+		
+	
+	
+	
+	
+</beans>

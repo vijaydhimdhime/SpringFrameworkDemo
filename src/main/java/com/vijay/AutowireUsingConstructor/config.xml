@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean name="student" class="com.vijay.AutowireUsingConstructor.Student" autowire="constructor">
+		<!-- <constructor-arg value="Vijay" type="String"/>
+		<constructor-arg value="102" type="int"/>
+		<constructor-arg>
+			<list>
+				<value>Mathematics</value>
+				<value>History</value>
+				<value>Geography</value>
+				<value>polity</value>
+				<value>Economy</value>
+			</list>
+		</constructor-arg> -->
+		<property name="studentName" value="vijay"/>
+		<property name="studentRollNumber" value="102"/>
+		<property name="subjects">
+			<list>
+				<value>Mathematics</value>
+				<value>History</value>
+				<value>Geography</value>
+				<value>polity</value>
+				<value>Economy</value>
+			</list>
+		</property>
+	</bean>	
+ <bean name="tea" class="com.vijay.AutowireUsingConstructor.Teacher">
+	<!-- 	<constructor-arg value="Mr.Jaydeep Sir"/>
+		<constructor-arg value="Java"/> -->
+		
+		<property name="name" value="Mr.Jaydeep Sir"/>
+		<property name="subject" value="Java"/>
+	</bean> 
+	
+	
+	
+</beans>

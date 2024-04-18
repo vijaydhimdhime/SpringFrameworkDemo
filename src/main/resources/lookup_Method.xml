@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id = "std1" class = "com.vijay.lookup_Method.Student" autowire="byType">
+		<property name="rollNo" value="101"/>
+		<property name="name" value="vijay"/>
+		<!-- <property name="address">
+			<ref bean="address"/>
+		</property>	 -->
+		<!-- <constructor-arg ref="address"/> -->
+		<lookup-method name="getAddress" bean="address"/>
+	</bean>
+	
+	<bean id = "address" class = "com.vijay.lookup_Method.Address" scope="prototype">
+		<property name="city" value="solapur"/>
+		<property name="pin" value="123456"/>
+	
+	</bean>
+	
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	
+	
+	<!-- <bean id="model1" class="com.vijay.usingIndexconstructor.usingRefernce.Engine">
+		<property name="modelYear" value="2015"/>
+	</bean>
+
+	
+	
+	<bean id="car" class="com.vijay.usingIndexconstructor.usingRefernce.Car">
+		<property name="carName" value="Honda Amaze"/>
+		<property name="engine" ref="model1"/> 
+		</bean>-->
+	
+	<bean id="model1" class="com.vijay.usingIndexconstructor.usingRefernce.Engine">
+		<constructor-arg value="2020"/>
+	</bean>
+	<bean id="car" class="com.vijay.usingIndexconstructor.usingRefernce.Car">
+		<constructor-arg value="honda city"/>
+		<constructor-arg ref="model1"/>		
+		
+	</bean>
+</beans>

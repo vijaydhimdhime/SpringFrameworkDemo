@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<!-- 	<bean class="com.vijay.StudentDetails" name="stud1">
+		<property name="studentRollNumber" value="101" />
+		<property name="studentName" value="vijay" />
+		<property name="address" value="pune" />
+	</bean>
+
+	<bean class="com.vijay.StudentDetails" name="stud2">
+		<property name="studentRollNumber" value="102" />
+		<property name="studentName" value="kunal" />
+		<property name="address" value="solapur" />
+	</bean>
+
+	<bean class="com.vijay.StudentDetails" name="stud3">
+		<property name="studentRollNumber" value="103" />
+		<property name="studentName" value="Aditya" />
+		<property name="address" value="Mumbai" />
+	</bean>
+
+
+
+	<bean class="com.vijay.StudentDetails" name="stud4">
+		<property name="studentRollNumber" value="104" />
+		<property name="studentName" value="Sumedh" />
+		<property name="address" value="Solapur" />
+	</bean>
+	<bean id="stud5" class="com.vijay.StudentDetails">
+		<property name="studentRollNumber" value="105"/>
+		<property name="studentName" value="Pari"/>
+		<property name="address" value="Hattij, solapur"/>
+	</bean>
+		
+		<bean id="stud66" class="com.vijay.StudentDetails"  p:studentRollNumber="106" p:studentName="aaa" p:address="yyy" />
+		
+		 -->
+		
+	
+		<bean name="collection2" class="com.vijay.collection.InjectCollection">
+		                                                              <!-- Inject LIST  -->
+			<property name="names">
+				<list>					
+					<value>vijay</value>
+					<value>kunal</value>
+					<value>mahesh</value>
+					<value>sandip</value>
+					<value>pramey</value>
+					<value>vijay</value>
+					<value>kunal</value>
+				</list>
+			</property>
+				                                                 	<!-- Inject SET  -->
+			<property name="cities">
+				<set>
+					<value>pune</value>
+					<value>solapur</value>
+					<value>Mumbai</value>
+					<value>USA</value>
+					<value>pune</value>
+					<value>solapur</value>
+				</set>
+			</property>
+				                                                 	<!-- Inject MAP   -->
+			<property name="books">
+			<map>
+				<entry key="1" value="polity" />
+				<entry key="2" value="geography" />
+				<entry key="3" value="marathi"/>
+				<entry key="4" value="english"/>
+				<entry key="5" value="History"/>
+				<entry key="5" value="polity"/>
+				<entry key="7" value="polity"/>
+			</map>
+			</property>
+			
+			
+		</bean>
+		
+		
+	
+	
+</beans>

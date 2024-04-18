@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.vijay.usingConstructor.StudentDetails" name="stud1">
+		<constructor-arg name="studentRollNumber" value="101" type="int"/>
+		<constructor-arg name="studentName" value="vijay" type="String"/>
+		<constructor-arg name="address" value="pune" type="String"/>
+		<constructor-arg name="pincode" ref="pin"/>
+	</bean>
+	<bean class="com.vijay.usingConstructor.StudentDetails" name="stud2">
+		<constructor-arg  value="102" />
+		<constructor-arg  value="kunal" />
+		<constructor-arg  value="solapur" />
+		<constructor-arg  ref="pin"/>
+	</bean>
+
+	<bean class="com.vijay.usingConstructor.Pin" name="pin">
+	<constructor-arg name="pincode" value="410002"/>
+	</bean>
+	
+</beans>

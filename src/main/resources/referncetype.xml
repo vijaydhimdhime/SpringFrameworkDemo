@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<!-- 	<bean class="com.vijay.StudentDetails" name="stud1">
+		<property name="studentRollNumber" value="101" />
+		<property name="studentName" value="vijay" />
+		<property name="address" value="pune" />
+	</bean>
+
+	<bean class="com.vijay.StudentDetails" name="stud2">
+		<property name="studentRollNumber" value="102" />
+		<property name="studentName" value="kunal" />
+		<property name="address" value="solapur" />
+	</bean>
+
+	<bean class="com.vijay.StudentDetails" name="stud3">
+		<property name="studentRollNumber" value="103" />
+		<property name="studentName" value="Aditya" />
+		<property name="address" value="Mumbai" />
+	</bean>
+
+
+
+	<bean class="com.vijay.StudentDetails" name="stud4">
+		<property name="studentRollNumber" value="104" />
+		<property name="studentName" value="Sumedh" />
+		<property name="address" value="Solapur" />
+	</bean>
+	<bean id="stud5" class="com.vijay.StudentDetails">
+		<property name="studentRollNumber" value="105"/>
+		<property name="studentName" value="Pari"/>
+		<property name="address" value="Hattij, solapur"/>
+	</bean>
+		
+		<bean id="stud66" class="com.vijay.StudentDetails"  p:studentRollNumber="106" p:studentName="aaa" p:address="yyy" />
+		
+		 -->
+		 <bean name ="student1" class="com.vijay.refernceType.Student">
+		 	<property name="studentRoll" value="101" />
+		 	<property name="studentName" value="sam" />
+		 	<property name="address" ref="addr"/>		
+		 </bean>
+	
+		 <bean name ="addr" class="com.vijay.refernceType.Address">
+		 	<property name="streetName" value="Bajirao road" />
+		 	<property name="cityName" value="mumbai" />
+		 	<property name="state" value="maharastra" />	
+		 	<property name="pin" ref="pin" />	
+		 </bean>
+		
+		 <bean name ="pin" class="com.vijay.refernceType.Pin">
+		 	<property name="pin" value="410001" />
+		 		
+		 </bean>
+</beans>
